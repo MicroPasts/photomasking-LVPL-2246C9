@@ -291,17 +291,17 @@ a.ol-full-screen-true:after {
 
 <script>
 function loadUserProgress() {
-    pybossa.userProgress('lvpl-2246c9').done(function(data){
+    pybossa.userProgress('lvpl-719fb3').done(function(data){
     	
     	console.log('Tasks done so far: ' + data.done);
     	
-        if ((data.done == 1) && ($.cookie('surveylvpl-2246c9') === undefined)){
+        if ((data.done == 1) && ($.cookie('surveylvpl-719fb3') === undefined)){
            $("#survey").modal('show');
-           $.cookie('surveylvpl-2246c9', 'shown', { path: '/'});
+           $.cookie('surveylvpl-719fb3', 'shown', { path: '/'});
         }
-        if ((data.done == 25) && ($.cookie('survey25lvpl-2246c9') === undefined)){
+        if ((data.done == 25) && ($.cookie('survey25lvpl-719fb3') === undefined)){
            $("#survey25").modal('show');
-           $.cookie('survey25lvpl-2246c9', 'shown', { path: '/'});
+           $.cookie('survey25lvpl-719fb3', 'shown', { path: '/'});
         }
         var pct = Math.round((data.done*100)/data.total);
         $("#progress").css("width", pct.toString() +"%");
@@ -669,5 +669,5 @@ pybossa.presentTask(function(task, deferred) {
         
 });
 
-pybossa.run('lvpl-2246c9');
+pybossa.run('lvpl-719fb3');
 </script>
